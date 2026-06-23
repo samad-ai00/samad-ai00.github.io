@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Case Study — AI RAG System" description="Implementation of an advanced RAG pipeline for technical documentation.">
+  <div>
+  <!-- Reading progress bar -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-[3px] bg-accent z-[100] transition-all duration-100" style="width:0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
+    <article>
+      <header class="pt-32 pb-10 max-w-4xl mx-auto px-6">
+
+        <!-- Back link -->
+        <a href="/projects" class="inline-flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+          Back to projects
+        </a>
+
+        <!-- Tags + date -->
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+          <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">AI/ML</span>
+          <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">Python</span>
+          <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">PyTorch</span>
+          <span class="text-xs text-zinc-400 ml-1">2026 · 8 weeks</span>
+        </div>
+
+        <h1 class="reveal font-display font-bold text-4xl md:text-5xl lg:text-6xl text-zinc-900 dark:text-white leading-tight mb-6">
+          Advanced RAG Pipeline for Technical Documentation
+        </h1>
+
+        <p class="reveal d1 text-xl text-zinc-500 dark:text-zinc-400 leading-relaxed mb-10 max-w-2xl">
+          Building a high-performance Retrieval-Augmented Generation system to provide instant, accurate answers from thousands of pages of complex technical docs.
+        </p>
+
+        <!-- Meta row -->
+        <div class="reveal d2 grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-t border-b border-zinc-100 dark:border-zinc-900">
+          <div>
+            <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Project</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm">IntelDoc AI</p>
+          </div>
+          <div>
+            <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Role</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm">Lead ML Engineer</p>
+          </div>
+          <div>
+            <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Timeline</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm">Jan – March 2026</p>
+          </div>
+          <div>
+            <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Deliverables</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm">Python, LangChain</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- ═══ HERO IMAGE ═══ -->
+      <div class="max-w-6xl mx-auto px-6 mb-16">
+        <div class="reveal photo-frame w-full h-72 md:h-[480px] rounded-3xl">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&q=80" alt="AI RAG System hero" loading="eager"/>
+        </div>
+      </div>
+
+      <!-- ═══ RESULTS BANNER ═══ -->
+      <div class="max-w-4xl mx-auto px-6 mb-16">
+        <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
+            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">98%</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Retrieval accuracy</p>
+          </div>
+          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
+            <p class="font-display font-bold text-3xl text-accent"><2s</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Average latency</p>
+          </div>
+          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
+            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">−60%</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Support ticket reduction</p>
+          </div>
+          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
+            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">4.9/5</p>
+            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">User satisfaction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ ARTICLE BODY ═══ -->
+      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs">
+
+        <h2>The challenge</h2>
+        <p>The client had over 50,000 pages of technical documentation spread across various formats (PDF, Markdown, HTML). Engineers were spending hours searching for specific configuration details. The goal was to build a system that could answer complex technical questions accurately and provide citations to the original sources.</p>
+
+        <h2>Research & Discovery</h2>
+        <p>We analyzed the existing documentation and identified key challenges: complex table structures, code blocks, and high semantic similarity between different product versions. We ran tests with various embedding models and vector databases to find the optimal combination for this specific use case.</p>
+
+      </div>
+
+      <!-- ═══ PROCESS ═══ -->
+      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs">
+        <h2>Process</h2>
+        <h3>Weeks 1–4 · Pipeline Engineering</h3>
+        <p>Implemented a robust ingestion pipeline that handles multiple file formats, extracts metadata, and performs semantic chunking. We used hybrid search (keyword + semantic) to improve retrieval precision for technical terms.</p>
+      </div>
+
+      <!-- Process steps -->
+      <div class="max-w-4xl mx-auto px-6 mb-12">
+        <div class="reveal space-y-4">
+          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
+            <div class="step-badge shrink-0 mt-0.5">1</div>
+            <div>
+              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Data Ingestion & Cleaning</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Automated parsing of PDF and Markdown docs. Hierarchical chunking to preserve context.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
+            <div class="step-badge shrink-0 mt-0.5">2</div>
+            <div>
+              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Embedding & Vector Indexing</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Fine-tuned embedding models on domain-specific vocabulary. Indexed in Pinecone for low-latency retrieval.</p>
+            </div>
+          </div>
+          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
+            <div class="step-badge shrink-0 mt-0.5">3</div>
+            <div>
+              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">LLM Integration & Prompt Engineering</p>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Custom prompt templates with multi-stage verification to reduce hallucinations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results section -->
+      <div class="max-w-3xl mx-auto px-6 pb-16 prose-cs">
+        <h2>Results</h2>
+        <p>The RAG system reduced the time spent on internal support queries by 60%. Engineers now get answers in seconds rather than minutes, with a verifiable accuracy rate of over 98%.</p>
+        <hr/>
+        <p><em>Interested in building intelligent systems? <a href="/#contact">Get in touch</a> — I'm available for new AI/ML projects.</em></p>
+      </div>
+    </article>
+
+  </div>
+  
+  <script>
+    const progressBar = document.getElementById('reading-progress');
+    window.addEventListener('scroll', () => {
+      if (!progressBar) return;
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = Math.min(100, Math.round((winScroll / height) * 100));
+      progressBar.style.width = scrolled + '%';
+      progressBar.setAttribute('aria-valuenow', scrolled.toString());
+    }, { passive: true });
+  </script>
+</Layout>
