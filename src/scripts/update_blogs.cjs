@@ -20,7 +20,7 @@ files.forEach(file => {
         const slug = file.replace('.md', '');
         
         // Insert new fields before the closing ---
-        const newFields = `author: "Shahbaz Fareed"\ntags: ["tech"]\nslug: "${slug}"\n`;
+        const newFields = `author: "Abdul Samad Satti"\ntags: ["tech"]\nslug: "${slug}"\n`;
         
         // Find a good place to insert (after pubDate)
         if (frontmatter.includes('pubDate:')) {
