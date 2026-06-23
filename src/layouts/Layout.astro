@@ -14,7 +14,6 @@ interface Props {
 
 const { title = SITE_TITLE, image = "/og-image.jpg" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin || 'http://localhost');
-
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -53,10 +52,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin 
 </head>
 
 <body class="flex flex-col min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased transition-colors duration-300">
-  <header id="main-header" class="fixed inset-x-0 top-0 z-50 sticky-header">
+  
+  <!-- Single Fixed Global Navigation Header Container -->
+  <header id="main-header" class="fixed inset-x-0 top-0 z-50 sticky-header border-b border-zinc-100/40 dark:border-zinc-900/40">
     <Navbar />
   </header>
 
+  <!-- Content Padding top ensures standard main elements sit cleanly underneath sticky navbar container -->
   <main class="flex-grow flex flex-col pt-16">
     <slot />
   </main>
@@ -65,11 +67,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin 
 
   <style is:global>
     .sticky-header {
-      transition: all 0.3s;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+    :global(.dark) .sticky-header {
+      background-color: rgba(9, 9, 11, 0.85);
     }
     @supports (backdrop-filter: blur(10px)) {
       .sticky-header {
         backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         background-color: rgba(255, 255, 255, 0.7);
       }
       :global(.dark) .sticky-header {
@@ -82,13 +89,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin 
 
   <script>
     const setup = () => {
-      // Theme Toggle
+      // Theme Toggle Click Handler
       document.getElementById('theme-toggle')?.addEventListener('click', () => {
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
 
-      // Reveal Observer
+      // Scroll Animation Intersection Observer
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
